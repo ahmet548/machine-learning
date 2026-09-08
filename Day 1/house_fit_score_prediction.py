@@ -1,7 +1,7 @@
 from sklearn.linear_model import LinearRegression
 import pandas as pd
 
-df = pd.read_csv("house_price.csv")
+df = pd.read_csv("house.csv")
 
 y = df[["House_Price"]]
 x = df[["Square_Footage", "Num_Bedrooms", "Num_Bathrooms", "Year_Built", "Lot_Size", "Garage_Size", "Neighborhood_Quality"]]
