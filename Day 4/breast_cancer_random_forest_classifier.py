@@ -14,6 +14,11 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, train_size=0.77, rando
 forest = RandomForestClassifier(n_estimators=200, max_depth=4)
 fModel = forest.fit(x_train, y_train)
 
+test = df.sample().drop(columns=["id", "diagnosis_M"]).values
+
 print(df.info())
-print(fModel.predict(x_test))
+
+print(test)
+print(f"Test Result: {fModel.predict(test)}")
+
 print(fModel.score(x_test, y_test))
